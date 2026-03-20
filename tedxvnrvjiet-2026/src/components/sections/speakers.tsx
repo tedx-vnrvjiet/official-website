@@ -52,6 +52,7 @@ export const Speakers = () => {
                   src={speaker.image}
                   alt={speaker.name}
                   className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110 grayscale group-hover:grayscale-0"
+                  style={{ objectPosition: (speaker as any).imagePosition || "center" }}
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-black via-black/20 to-transparent opacity-80 group-hover:opacity-60 transition-opacity" />
               </div>
@@ -107,6 +108,7 @@ export const Speakers = () => {
                   src={activeSpeaker.image}
                   alt={activeSpeaker.name}
                   className="w-full h-full object-cover"
+                  style={{ objectPosition: (activeSpeaker as any).imagePosition || "center" }}
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-black to-transparent" />
                 <div className="absolute bottom-10 left-10">
